@@ -1,0 +1,54 @@
+{
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-rational-order"
+	],
+	"plugins": [
+		"stylelint-scss",
+		"stylelint-order"
+	],
+	"rules": {
+		"order/properties-order": [],
+		"plugin/rational-order": [true, {
+			"border-in-box-model": false,
+			"empty-line-between-groups": true
+		}],
+		"at-rule-no-unknown": [true, {
+			"ignoreAtRules": ["include", "mixin", "each", "if"]
+		}],
+		"comment-empty-line-before": "always",
+		"declaration-empty-line-before": null,
+		"block-no-empty": null,
+		"no-empty-source": null,
+		"at-rule-empty-line-before": null,
+		"indentation": null,
+		"no-descending-specificity": null,
+		"scss/at-import-partial-extension": "never",
+		"block-closing-brace-newline-before": "always-multi-line",
+		"block-closing-brace-newline-after": "always-multi-line",
+		"block-closing-brace-space-before": null,
+		"block-closing-brace-space-after": null,
+		"selector-max-class": 4,
+		"selector-pseudo-element-colon-notation": null,
+		"selector-combinator-space-before": null,
+		"selector-combinator-space-after": null,
+		"color-hex-length": "long",
+		"number-leading-zero": "always",
+		"unit-allowed-list": [
+			"em",
+			"rem",
+			"%",
+			"px",
+			"vw",
+			"vh",
+			"vm",
+			"vmax",
+			"vmin",
+			"dpi",
+			"dppx",
+			"fr",
+			"s",
+			"deg"
+		]
+	}
+}

@@ -1,0 +1,31 @@
+title= pageTitle
+|
+|
+block meta
+	meta(charset="utf-8")
+	meta(name="author" content=author) 
+	meta(name="description" content=description)
+	meta(name="keywords" content=keywords)
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	|
+	|
+	<!--[if IE]>
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	|
+	|
+	<![endif]-->
+	|
+	|
+block links
+	link(rel="preload" href="fonts/opensans/opensans.woff2" as="font" type="font/woff2" crossorigin)
+	link(rel="preload" href="fonts/opensans/opensans.woff" as="font" type="font/woff" crossorigin)
+	link(rel="preload" href="fonts/opensans/opensans.ttf" as="font" type="font/ttf" crossorigin)
+
+	link(rel="preload" href="css/libs.css" + jscssVersion as="style")
+	link(rel="preload" href="css/style.css" + jscssVersion as="style")
+
+	//- link(rel="preload" href="img/sprite/sprite.png" as="image")
+
+	link(rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon")
+	link(rel="stylesheet" href="css/libs.css" + jscssVersion)
+	link(rel="stylesheet" href="css/style.css" + jscssVersion)

@@ -1,0 +1,92 @@
+//***********************MEDIA SIZES***********************//
+
+$xxs: 320px;
+$xs: 485px;
+$sm: 600px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1440px;
+$xxxl: 1920px;
+$xxxxl: 2560px;
+
+//**************************COLORS**************************//
+
+$black: #000000;
+$grey_1: #111111;
+$grey_2: #222222;
+$grey_3: #333333;
+$grey_4: #444444;
+$grey_5: #555555;
+$grey_6: #666666;
+$grey_7: #777777;
+$grey_8: #888888;
+$grey_9: #999999;
+$grey_a: #aaaaaa;
+$grey_b: #bbbbbb;
+$grey_c: #cccccc;
+$grey_d: #dddddd;
+$grey_e: #eeeeee;
+$white: #ffffff;
+
+//gradients:
+$gradient_1: $grey_7,
+$white;
+
+//shadows:
+$shadow_1: inset 0 0 0 1px $black;
+
+//************************MEDIA INFO************************//
+
+// phones 1 (xs):
+@media screen and (min-width: 320px) {
+  // 320x480 (P) - iPhone 4
+  // 320x568 (P) - iPhone 5
+  // 375x667 (P) - iPhone 6/7/8
+  // 414x736 (P) - iPhone 6/7/8 Plus
+  // 375x812 (P) - iPhone X
+}
+
+// phones 2 (sm):
+@media screen and (min-width: 480px) {
+  // 480x853 (P) - Galaxy Note 5
+  // 600x1024 (P) - 7" tablet
+  // 480x320 (L) - iPhone 4
+  // 568x320 (L) - iPhone 5
+  // 667x375 (L) - iPhone 6/7/8
+  // 736x414 (L) - iPhone 6/7/8 Plus
+}
+
+// tablets 1 (md):
+@media screen and (min-width: 768px) {
+  // 768x1024 (P) - iPad
+  // 800x1280 (P) - 8" tablet
+  // 812x375 (L) - iPhone X
+  // 853x480 (L) - Galaxy Note 5
+}
+
+// tablets 2 (lg):
+@media screen and (min-width: 1024px) {
+  // 1024x1366 (P) - iPad Pro
+  // 1024x600 (L) - 7" tablet
+  // 1024x768 (L) - iPad
+}
+
+// tablets & desktops (xl):
+@media screen and (min-width: 1200px) {
+  // 1280x800 (L) - 8" tablet
+  // 1366x768 (L) - "sm" desktop
+  // 1366x1024 (L) - iPad Pro
+  // 1440x900 (L) - "md" desktop
+}
+
+// desktops 1 (xxl):
+@media screen and (min-width: 1520px) {
+  // 1600x900 (L) - "lg"" desktop
+}
+
+// desktops 2 (xxxl):
+@media screen and (min-width: 1920px) {
+  // 1920x1080 (L) - "hd"" desktop
+  // 3840x2160 (L) - "uhd"" desktop
+}

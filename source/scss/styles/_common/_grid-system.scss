@@ -1,0 +1,64 @@
+:root {
+  --cols: 12;
+  --gutter: 10px;
+  --side_pads: 20px;
+
+  @media screen and (min-width: $sm) {
+    --gutter: 15px;
+  }
+
+  @media screen and (min-width: $md) {
+    --gutter: 20px;
+    --side_pads: 25px;
+  }
+
+  @media screen and (min-width: $lg) {
+    --gutter: 30px;
+    --side_pads: calc(25px + 120 * (100vw - 1024px) / 416);
+  }
+
+  @media screen and (min-width: $xxl) {
+    --side_pads: 145px;
+  }
+}
+
+.grid-system::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  max-width: 1440px;
+  margin: 0 auto;
+
+  --color: rgb(255 0 0 / 0.075);
+
+  background-image: repeating-linear-gradient(to right, transparent 0, transparent calc(var(--gutter) / 2), var(--color) calc(var(--gutter) / 2), var(--color) calc(var(--col_width) + var(--gutter) / 2), transparent calc(var(--col_width) + var(--gutter) / 2), transparent calc(var(--col_width) + var(--gutter)));
+  background-repeat: no-repeat;
+  border: solid transparent;
+  border-width: 0 calc(var(--side_pads) - var(--gutter) / 2);
+
+  pointer-events: none;
+
+  --col_width: calc((100% - var(--gutter) * var(--cols)) / var(--cols));
+}
+
+@mixin cols($cols_count) {
+  width: calc((((100% - var(--gutter) * (var(--cols) - 1)) / var(--cols)) * #{$cols_count}) + (var(--gutter) * (#{$cols_count} - 1)));
+}
+
+@mixin _cols($cols, $cols_count) {
+  width: calc((((100% - var(--gutter) * (#{$cols} - 1)) / #{$cols}) * #{$cols_count}) + (var(--gutter) * (#{$cols_count} - 1)));
+}
+
+// Примечание к миксину cols:
+// От 100% родителя вычитаем суммарную ширину всех отступов
+// оставшуюся ширину делим на количество всех колонок и получаем длину одной колонки, значение которой умножаем на необходимое количество колонок
+// к полученной ширине необходимого количества колонок добавляем ширину отступов между ними
+
+@mixin container_pads($pt: 0, $pb: 0) {
+  padding: $pt var(--side_pads) $pb var(--side_pads);
+}

@@ -1,0 +1,55 @@
+{
+  "name": "gulp-start-2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --prod",
+    "webp": "gulp webp",
+    "stylelint": "gulp stylelint",
+    "stylefix": "gulp stylefix"
+  },
+  "author": "Arty Violet",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "browser-sync": "^2.29.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "gulp.spritesmith": "^6.13.0",
+    "merge-stream": "^2.0.0",
+    "sass": "^1.59.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0",
+    "vinyl-buffer": "^1.0.1",
+    "yargs": "^17.7.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "svg4everybody": "^2.1.9"
+  },
+  "browserslist": [
+    "last 3 version"
+  ]
+}

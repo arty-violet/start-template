@@ -1,0 +1,42 @@
+//***********************UTILS***********************//
+
+@import "utils/scss-variables";
+@import "utils/scss-mixins";
+@import "utils/fonts";
+@import "utils/sprite";
+// @include sprites($spritesheet-sprites);
+
+//********************BASE STYLES********************//
+
+@import "settings/simplify";
+@import "settings/base-styles";
+
+//**********************MODULES**********************//
+//-----------------------COMMON-----------------------//
+@import "styles/_common/grid-system";
+@import "styles/_common/hidden";
+@import "styles/_common/container";
+@import "styles/_common/icon";
+// @import "styles/_common/title";
+// @import "styles/_common/button";
+
+//-----------------------HEADER-----------------------//
+// @import "styles/I_header/header";
+// @import "styles/I_header/nav-menu/nav-menu";
+
+//------------------------MAIN------------------------//
+// @import "styles/II_main/main";
+
+//------------------------INNER-----------------------//
+// @import "styles/III_inner/inner";
+
+//-----------------------FOOTER-----------------------//
+// @import "styles/IV_footer/footer";
+// @import "styles/IV_footer/social/social";
+
+//-----------------------MODALS-----------------------//
+// @import "styles/V_modal/modal";
+
+//----------------------ANIMATION----------------------//
+// @import "styles/VI_animations/lib-animations";
+// @import "styles/VI_animations/project-animations";

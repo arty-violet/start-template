@@ -1,0 +1,208 @@
+//* ------------- Triangle ------------- //
+
+@mixin triangle($direction, $w, $h, $color) {
+  content: "";
+
+  display: block;
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+
+  @if $direction==top {
+    border-width: 0 $w/2 $h $w/2;
+    border-color: transparent transparent $color transparent;
+  }
+
+  @if $direction==bottom {
+    border-width: $h $w/2 0 $w/2;
+    border-color: $color transparent transparent transparent;
+  }
+
+  @if $direction==left {
+    border-width: $h/2 $w $h/2 0;
+    border-color: transparent $color transparent transparent;
+  }
+
+  @if $direction==right {
+    border-width: $h/2 0 $h/2 $w;
+    border-color: transparent transparent transparent $color;
+  }
+
+  @if $direction==topright {
+    border-width: 0 $w $h 0;
+    border-color: transparent $color transparent transparent;
+  }
+
+  @if $direction==bottomright {
+    border-width: 0 0 $h $w;
+    border-color: transparent transparent $color transparent;
+  }
+
+  @if $direction==bottomleft {
+    border-width: $h 0 0 $w;
+    border-color: transparent transparent transparent $color;
+  }
+
+  @if $direction==topleft {
+    border-width: $h $w 0 0;
+    border-color: $color transparent transparent transparent;
+  }
+}
+
+//* ------------- Media ------------- //
+
+$retina_dpi: 144dpi;
+$retina_dppx: 1.5;
+
+@mixin retina($retina_dppx) {
+
+  @media screen and (-webkit-min-device-pixel-ratio: $retina_dppx),
+  screen and (min-resolution: $retina_dpi),
+  screen and (min-resolution: #{$retina_dppx + dppx}) {
+    @content;
+  }
+}
+
+//* -------------- Flex -------------- //
+
+@mixin flex_flow($df, $dir, $wrap) {
+
+  //-------------------------
+  @if $df==f {
+    display: flex;
+  }
+
+  //-------------------------
+  @if $dir==r {
+    flex-direction: row;
+  }
+
+  @if $dir==rr {
+    flex-direction: row-reverse;
+  }
+
+  @if $dir==c {
+    flex-direction: column;
+  }
+
+  @if $dir==cr {
+    flex-direction: column-reverse;
+  }
+
+  //-------------------------
+  @if $wrap==w {
+    flex-wrap: wrap;
+  }
+
+  @if $wrap==nw {
+    flex-wrap: nowrap;
+  }
+
+  @if $wrap==wr {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@mixin flex_align($ali, $jc, $alc, $als) {
+
+  //-------------------------
+  @if $alc==s {
+    align-content: stretch;
+  }
+
+  @if $alc==fs {
+    align-content: flex-start;
+  }
+
+  @if $alc==c {
+    align-content: center;
+  }
+
+  @if $alc==fe {
+    align-content: flex-end;
+  }
+
+  @if $alc==sb {
+    align-content: space-between;
+  }
+
+  @if $alc==sa {
+    align-content: space-around;
+  }
+
+  @if $alc==se {
+    justify-content: space-evenly;
+  }
+
+  //-------------------------
+  @if $ali==s {
+    align-items: stretch;
+  }
+
+  @if $ali==fs {
+    align-items: flex-start;
+  }
+
+  @if $ali==c {
+    align-items: center;
+  }
+
+  @if $ali==fe {
+    align-items: flex-end;
+  }
+
+  @if $ali==b {
+    align-items: baseline;
+  }
+
+  //-------------------------
+  @if $jc==fs {
+    justify-content: flex-start;
+  }
+
+  @if $jc==c {
+    justify-content: center;
+  }
+
+  @if $jc==fe {
+    justify-content: flex-end;
+  }
+
+  @if $jc==sb {
+    justify-content: space-between;
+  }
+
+  @if $jc==sa {
+    justify-content: space-around;
+  }
+
+  @if $jc==se {
+    justify-content: space-evenly;
+  }
+
+  //-------------------------
+  @if $als==a {
+    align-self: auto;
+  }
+
+  @if $als==s {
+    align-self: stretch;
+  }
+
+  @if $als==fs {
+    align-self: flex-start;
+  }
+
+  @if $als==c {
+    align-self: center;
+  }
+
+  @if $als==fe {
+    align-self: flex-end;
+  }
+
+  @if $als==b {
+    align-self: baseline;
+  }
+}
